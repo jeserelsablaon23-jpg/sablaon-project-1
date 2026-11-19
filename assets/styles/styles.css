@@ -1,0 +1,230 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #080812;
+    overflow-x: hidden;
+}
+
+/* RGB Animated Background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    background: conic-gradient(
+        #ff0055,
+        #7b2cff,
+        #00cfff,
+        #00ff88,
+        #ffff00,
+        #ff0055
+    );
+    filter: blur(120px);
+    opacity: 0.13;
+    animation: rgbBackground 12s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rgbBackground {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(10, 10, 25, 0.9);
+    border-bottom: 1px solid #292942;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(
+        90deg, #ff0055, #a855f7, #00cfff, #00ff88
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 12px #00eaff;
+}
+
+/* Sections */
+section {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #00eaff;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+/* Home */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 35px;
+    text-align: left;
+}
+
+.hero p {
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin: 15px 0;
+    background: linear-gradient(
+        90deg, #ff0055, #a855f7, #00cfff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    color: #00ff99;
+    text-shadow: 0 0 12px #00ff99;
+}
+
+/* RGB Profile Picture */
+.hero img {
+    width: 260px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #00eaff;
+    box-shadow:
+        0 0 15px #00eaff,
+        0 0 35px #a855f7;
+}
+
+/* RGB Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(
+        90deg, #ff0055, #8b2cff, #007bff
+    );
+    box-shadow: 0 0 15px #8b2cff;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+/* RGB Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1 1 200px;
+    padding: 30px;
+    border-radius: 15px;
+    background: #151527;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#151527, #151527) padding-box,
+        linear-gradient(
+            120deg, #ff0055, #8b2cff, #00cfff, #00ff88
+        ) border-box;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #8b2cff;
+}
+
+/* About and Contact */
+#about p,
+#contact p {
+    line-height: 2;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #101020;
+    border-top: 1px solid #343454;
+    color: #aaa;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero img {
+        width: 210px;
+        height: 250px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
