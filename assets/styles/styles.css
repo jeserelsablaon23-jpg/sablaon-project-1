@@ -230,35 +230,58 @@ footer {
 }
 
 
-/* Projects Section */
+
+/* PROJECTS SECTION */
 #projects {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* PROJECT CARDS */
 .cards {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 25px;
     flex-wrap: wrap;
 }
 
 .card {
-    background: #1a1a2e;
-    padding: 20px;
-    border-radius: 12px;
     width: 280px;
+    padding: 20px;
+    background: #1a1a2e;
+    border-radius: 15px;
     color: white;
-    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-/* Project Image */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* PROJECT IMAGES */
 .card .ii {
-    width: 150px;
-    height: 120px;
+    width: 140px;
+    height: 110px;
     object-fit: cover;
-    border-radius: 10px;
     display: block;
     margin: 15px auto;
+    border-radius: 10px;
 }
 
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
