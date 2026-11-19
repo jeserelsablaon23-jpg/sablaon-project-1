@@ -237,3 +237,12 @@ footer {
     display: block;
     margin: 10px auto;
 }
+
+.kk img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
