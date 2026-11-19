@@ -229,11 +229,36 @@ footer {
     }
 }
 
-.ii img {
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a2e;
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    color: white;
+    text-align: center;
+}
+
+/* Project Image */
+.card .ii {
     width: 150px;
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
 }
+
